@@ -73,7 +73,16 @@ I --> J{{"b =", b}}
 ```
 Algoritmo TrocaValores
 INICIO
-...
+DECLARE a, b, aux NUMÉRICOS
+ESCREVA “Digite o valor de a: "
+LEIA a
+ESCREVA “Digite o valor de b: "
+LEIA b
+ESCREVA “Valores originais: a =”, a, " e b =”, b
+aux = a
+a = b
+b = aux
+ESCREVA “Valores trocados: a =”, a, " e b =”, b
 FIM
 ```
 
@@ -142,7 +151,18 @@ J --LOOP--> E
 ```
 Algoritmo ContaAprovacoes
 INICIO
-...
+DECLARE n, cont, nota INTEIRO E POSITIVO
+ESCREVA "Digite o número de alunos "
+LEIA n
+cont = 0
+PARA i DE 1 ATÉ n FAÇA
+ESCREVA "Digite a nota do aluno ", i, ": "
+LEIA nota
+SE nota >= 50 E nota <= 100
+ENTÃO cont = cont + 1
+FIM_SE
+FIM_PARA
+ESCREVA "O número de alunos aprovados é: " cont
 FIM
 ```
 
@@ -205,7 +225,19 @@ K --LOOP--> G
 ```
 Algoritmo SomaNumeros
 INICIO
-...
+DECLARE n, numero, soma INTEIRO
+soma = 0
+ESCREVA "Digite um número n: "
+LEIA n
+SE n >= 0 ENTAO
+PARA i DE 1 ATÉ n FAÇA
+ESCREVA "Digite o número ", i, ": "
+LEIA numero soma = soma + numero
+FIM_PARA
+ESCREVA "A soma dos números é: " soma
+SENÃO
+ESCREVA “O número deve ser positivo!”
+FIM_SE
 FIM
 ```
 
@@ -259,7 +291,21 @@ I --LOOP--> E
 ```
 Algoritmo SomaSerie
 INICIO
-...
+DECLARE n, i, numerador, denominador: INTEIRO
+DECLARE termo, S: REAL
+ESCREVA "Digite o número de termos n da série: "
+LEIA n
+SE n > 0 ENTAO
+S = 0 PARA i DE 1 ATÉ n FAÇA
+numerador = (2 * i) - 1
+denominador = 2 * i
+termo = numerador / denominador
+S <- S + termo
+FIM_PARA
+ESCREVA "O valor da série S é " S
+SENAO
+ESCREVA “O número de termos deve ser maior que zero!”
+FIM_SE
 FIM
 ```
 
@@ -307,7 +353,18 @@ H --> I
 ```
 Algoritmo CalcFatorial
 INICIO
-...
+DECLARE n, i, fatorial INTEIRO
+ESCREVA "Digite um número inteiro e não negativo n: "
+LEIA n
+SE n >= 0 ENTAO
+fatorial = 1
+PARA i DE 1 ATÉ n FAÇA
+fatorial = fatorial * i
+FIM_PARA
+ESCREVA “O fatorial de” n “é” fatorial
+SENAO
+ESCREVA “O número deve ser não negativo!”
+FIM_SE
 FIM
 ```
 
@@ -355,7 +412,20 @@ I --LOOP--> E
 ```
 Algoritmo GeraFibonacci
 INICIO
-...
+DECLARE n, a, b, termo atual INTEIRO
+ESCREVA "Digite o número de termos n: "
+LEIA n
+SE n >= 1 ENTAO a = 0
+b = 1
+ESCREVA “Os” n “primeiros termos da sequência de Fibonacci são:”
+ESCREVA a
+ESCREVA b
+PARA i DE 3 ATÉ n FAÇA termo = a + b
+ESCREVA termo a = b b = termo
+FIM_PARA
+SENAO
+ESCREVA “O número de termos deve ser maior ou igual a 1!”
+FIM_SE
 FIM
 ```
 #### Teste de mesa
@@ -406,7 +476,18 @@ E --> W
 ```
 Algoritmo InverteInteiro
 INICIO
-...
+DECLARE num, digito, num_invertido INTEIRO
+ESCREVA "Digite um número inteiro positivo "
+LEIA num
+SE num > 0 ENTAO num_invertido = 0
+ENQUANTO num > 0 FAÇA
+digito = num % 10
+num_invertido = (num_invertido * 10) + digito
+num = num / 10
+FIM_ENQUANTO ESCREVA "O número invertido é: " num_invertido
+SENAO
+ESCREVA “O número deve ser inteiro e positivo!”
+FIM_SE
 FIM
 ```
 
