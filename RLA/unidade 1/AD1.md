@@ -82,7 +82,7 @@ ESCREVA “Valores originais: a =”, a, " e b =”, b
 aux = a
 a = b
 b = aux
-ESCREVA “Valores trocados: a =”, a, " e b =”, b
+ESCREVA “Valores trocados: a =” a " e b =” b
 FIM
 ```
 
