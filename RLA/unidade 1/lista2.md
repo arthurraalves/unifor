@@ -62,6 +62,17 @@ A([INICIO]) --> B([FIM])
 
 ```
 Algoritmo Media
+DECLARE n1, n2, n3, n4, media INTEIRO E POSITIVO
+  ESCREVA "Digite o primeiro número: "
+  LEIA n1
+  ESCREVA "Digite o segundo número: "
+  LEIA n2
+  ESCREVA "Digite o terceiro número: "
+  LEIA n3
+  ESCREVA "Digite o quarto número: "
+ LEIA n4
+ENTÃO FAÇA  media = (n1 + n2 + n3 + n4) / 4
+ ESCREVA "A média dos quatro números é: " media
 FIM_ALGORITMO
 ```
 
@@ -86,6 +97,11 @@ A([INICIO]) --> B([FIM])
 
 ```
 Algoritmo ConverteCelsiusFarenheit
+DECLARE  temperaturaC, temperaturaF NUMÉRICO  
+  ESCREVA "Digite a temperatura em Celsius (C): " 
+  LEIA  temperaturaC  
+ ENTÃO FAÇA temperaturaF = (9 / 5) * temperaturaC + 32  
+  ESCREVA "A  temperatura  equivalente  em  Fahrenheit (F) é: " temperaturaF
 FIM_ALGORITMO
 ```
 
@@ -111,6 +127,33 @@ A([INICIO]) --> B([FIM])
 
 ```
 Algoritmo Calculadora
+DECLARE num1, num2, resultado NUMÉRICO
+DECLARE operador CARACTERE
+ESCREVA "Digite o primeiro número: "
+LEIA num1
+ESCREVA "Digite o segundo número: "
+LEIA num2
+ESCREVA "Digite o operador: "
+LEIA operador
+SE operador == “+” ENTÃO
+resultado = num1 + num2
+SENÃO
+SE operador == “-” ENTÃO
+resultado = num1 - num2
+SENÃO
+SE operador == ‘*’ ENTÃO
+resultado = num1 * num2
+SENÃO
+SE operador == “/” ENTÃO
+SE num2 != 0 ENTÃO
+resultado = num1 / num2
+SENÃO
+ESCREVA “Erro: Divisão por zero!”
+FIM_SE
+SENÃO
+ESCREVA “Operador inválido!”
+FIM_SE
+ESCREVA "Resultado: " resultado
 FIM_ALGORITMO
 ```
 
@@ -135,6 +178,22 @@ A([INICIO]) --> B([FIM])
 
 ```
 Algoritmo ClassificaCategoria
+DECLARE idade INTEIRO
+ESCREVA "Digite a idade: "
+LEIA idade 5
+SE idade >= E idade <= 7 ENTÃO
+ESCREVA “Categoria: Infantil A”
+SENÃO SE idade >= 8 E idade <= 10 ENTÃO
+ESCREVA “Categoria: Infantil B”
+SENÃO SE idade >= 11 E idade <= 13 ENTÃO
+ESCREVA “Categoria: Juvenil A”
+SENÃO SE idade >= 14 E idade <= 17 ENTÃO
+ESCREVA “Categoria: Juvenil B”
+SENÃO SE idade >= 18 ENTÃO
+ESCREVA “Categoria: Adulto”
+SENÃO
+ESCREVA “Idade inválida”
+FIM_SE
 FIM_ALGORITMO
 ```
 
