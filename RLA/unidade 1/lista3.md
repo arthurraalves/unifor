@@ -108,6 +108,19 @@ A([INICIO]) --> B([FIM])
 
 ```
 Algoritmo ClassificaCategoria
+DECLARE numero, resto INTEIRO
+REPITA
+ESCREVA "Digite um número inteiro positivo: "
+LEIA numero
+SE numero < 0 ENTAO
+ESCREVA “Número inválido. Digite um número inteiro positivo.”
+FIM_SE
+ATÉ QUE numero >= 0
+SE numero % 2 == 0 ENTAO
+ESCREVA “O número é par!”
+SENAO
+ESCREVA “O número é ímpar!”
+FIM_SE
 FIM_ALGORITMO
 ```
 
@@ -132,6 +145,7 @@ A([INICIO]) --> B([FIM])
 
 ```
 Algoritmo ClassificaCategoria
+
 FIM_ALGORITMO
 ```
 
@@ -157,6 +171,19 @@ A([INICIO]) --> B([FIM])
 
 ```
 Algoritmo ClassificaCategoria
+DECLARE tamanho, soma, i, sequencia INTEIRO
+ INICIO
+ ESCREVA “Digite o tamanho da sequência: ”
+ LEIA tamanho
+ PARA i DE 1 ATÉ tamanho FAÇA
+ ESCREVA "Digite o elemento “, i, " da sequência:”
+ LEIA sequencia
+ FIM_PARA
+ soma = 0
+ PARA i DE 1 ATÉ tamanho FAÇA
+ soma = soma + sequencia
+ FIM_PARA
+ ESCREVA “A soma da sequência é: ” soma
 FIM_ALGORITMO
 ```
 
@@ -183,6 +210,23 @@ A([INICIO]) --> B([FIM])
 
 ```
 Algoritmo ClassificaCategoria
+DECLARE nota, soma, quantidade_alunos NUMÉRICO E POSITIVO
+ soma = 0
+ quantidade_alunos = 0
+REPITA
+ ESCREVA “Digite a nota do aluno: ”
+ LEIA nota
+ SE nota >= 0 ENTÃO
+ soma = soma + nota
+ quantidade_alunos <- quantidade_alunos + 1
+ FIM_SE
+ ATÉ QUE nota < 0
+ SE quantidade_alunos > 0 ENTÃO
+ media = soma / quantidade_alunos
+ ESCREVA "Foram lidas ", quantidade_alunos, " notas. A média é " media
+ SENÃO
+ ESCREVA “Nenhuma nota foi lida!”
+ FIM_SE
 FIM_ALGORITMO
 ```
 
