@@ -63,7 +63,16 @@ A([INICIO]) --> B([FIM])
 #### Pseudocódigo (1.0 ponto)
 
 ```
-Algoritmo ContaAprovacoes
+ALGORITMO calcular_novo_salario
+INÍCIO 
+DECLARE salario_atual, novo_salario NUMÉRICO 
+ESCREVA "Digite o salário atual "
+LEIA salario_atual 
+SE salario_atual <= 500 ENTAO novo_salario = salario_atual * 1.20 
+SENAO novo_salario = salario_atual * 1.10   
+FIM_SE 
+ESCREVA "O novo salário do funcionário é: " novo_salario 
+FIM
 FIM_ALGORITMO
 ```
 
@@ -87,7 +96,18 @@ A([INICIO]) --> B([FIM])
 #### Pseudocódigo (1 ponto)
 
 ```
-Algoritmo ContaAprovacoes
+ALGORITMO calcular_media 
+INÍCIO
+DECLARE nota1, nota2, media NUMÉRICO 
+ESCREVA "Digite a primeira nota do aluno " 
+LEIA nota1 
+ESCREVA "Digite a segunda nota do aluno: " 
+LEIA nota2  = (nota1 + nota2) / 2   
+SE media >= 6.0 ENTAO ESCREVA "Aluno aprovado!" 
+SENAO
+ESCREVA "Aluno reprovado!" 
+FIM_SE 
+FIM
 FIM_ALGORITMO
 ```
 
@@ -112,7 +132,19 @@ A([INICIO]) --> B([FIM])
 #### Pseudocódigo (1.0 ponto)
 
 ```
-Algoritmo ContaAprovacoes
+ALGORITMO verificar_cnh 
+INÍCIO 
+DECLARE idade, idade_minima, anos_faltando INTEIRO 
+idade_minima = 18  
+ESCREVA "Digite a idade do candidato: " 
+LEIA idade 
+SE idade >= idade_minima 
+ENTAO 
+ESCREVA "O candidato pode tirar a CNH." 
+SENAO anos_faltando = idade_minima - idade 
+ESCREVA "Só poderá tirar a CNH após" anos_faltando "ano(s)"	
+FIM_SE 
+FIM
 FIM_ALGORITMO
 ```
 
