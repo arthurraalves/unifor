@@ -71,18 +71,36 @@ I --> J{{"b =", b}}
 #### Pseudocódigo (1 ponto)
 
 ```
-Algoritmo TrocaValores
+ALGORTIMO TrocaValores
+DECLARE a,b,axu: REAL
+
 INICIO
-DECLARE a, b, aux NUMÉRICOS
-ESCREVA “Digite o valor de a: "
-LEIA a
-ESCREVA “Digite o valor de b: "
-LEIA b
-ESCREVA “Valores originais: a =”, a, " e b =”, b
-aux = a
-a = b
-b = aux
-ESCREVA “Valores trocados: a =” a " e b =” b
+
+    // Insira seu comentário
+    ESCREVA "Digite o valor da a:"
+
+    // Insira seu comentário
+    LEIA a
+
+    // Insira seu comentário
+    ESCREVA "Digite o valor da b:"
+
+    // Insira seu comentário
+    LEIA b
+
+    // Insira seu comentário
+    aux <- a 
+
+    // Insira seu comentário
+    a <- b
+
+    // Insira seu comentário
+    b <- aux
+
+    // Insira seu comentário
+    ESCREVA "a=", a
+    ESCREVA "b=", b
+
 FIM
 ```
 
@@ -149,20 +167,42 @@ J --LOOP--> E
 #### Pseudocódigo 01 (1 ponto)
 
 ```
-Algoritmo ContaAprovacoes
+ALGORTIMO ContaAprovacoes
+DECLARE n, cont, nota, i: INTEIRO
+
 INICIO
-DECLARE n, cont, nota INTEIRO E POSITIVO
-ESCREVA "Digite o número de alunos "
-LEIA n
-cont = 0
-PARA i DE 1 ATÉ n FAÇA
-ESCREVA "Digite a nota do aluno ", i, ": "
-LEIA nota
-SE nota >= 50 E nota <= 100
-ENTÃO cont = cont + 1
-FIM_SE
-FIM_PARA
-ESCREVA "O número de alunos aprovados é: " cont
+
+    // Insira seu comentário
+    ESCREVA "Digite a quantidade de notas dos alunos:"
+
+    // Insira seu comentário
+    LEIA n
+
+    // Insira seu comentário
+    cont = 0 
+
+    // Insira seu comentário
+    PARA i DE 1 ATE n FAÇA
+
+        // Insira seu comentário
+        ESCREVA "Digite a nota do aluno", i, ":"
+
+        // Insira seu comentário
+        LEIA nota
+
+        // Insira seu comentário
+        SE nota >= 50 E nota <= 100 ENTAO
+
+            // Insira seu comentário
+            cont = cont + 1 
+
+        FIM_SE
+
+    FIM_PARA
+
+    // Insira seu comentário
+    ESCREVA "O numero de alunos aprovados e:", cont
+
 FIM
 ```
 
@@ -224,20 +264,49 @@ K --LOOP--> G
 
 ```
 Algoritmo SomaNumeros
+DECLARE n,i,soma: INTEIRO
+
 INICIO
-DECLARE n, numero, soma INTEIRO
-soma = 0
-ESCREVA "Digite um número n: "
-LEIA n
-SE n >= 0 ENTAO
-PARA i DE 1 ATÉ n FAÇA
-ESCREVA "Digite o número ", i, ": "
-LEIA numero soma = soma + numero
-FIM_PARA
-ESCREVA "A soma dos números é: " soma
-SENÃO
-ESCREVA “O número deve ser positivo!”
-FIM_SE
+
+    // Insira seu comentário
+    ESCREVA "Digite a quantidade de números<br> (n >= 0):"
+    LEIA n
+
+    // Insira seu comentário
+    SE n >=0 ENTAO
+
+        // Insira seu comentário
+        soma <- 0
+
+        // Insira seu comentário
+        i <- i
+
+        // Insira seu comentário
+        ENQUANTO i <= n FAÇA
+
+            // Insira seu comentário
+            ESCREVA "Digite um número:"
+
+            // Insira seu comentário
+            LEIA num 
+
+            // Insira seu comentário
+            soma <- soma + num
+
+            // Insira seu comentário
+            i <- i + 1
+
+        FIM_ENQUANTO
+
+    // Insira seu comentário
+    SENAO
+        "O valor deve ser maior ou igual a zero!"
+
+    FIM_SE
+
+    // Insira seu comentário
+    ESCREVA "A soma dos numeros é , soma"
+
 FIM
 ```
 
@@ -290,22 +359,39 @@ I --LOOP--> E
 
 ```
 Algoritmo SomaSerie
+DECLARE n,numerador,denominador: INTEIRO; termo, S: REAL
+
 INICIO
-DECLARE n, i, numerador, denominador: INTEIRO
-DECLARE termo, S: REAL
-ESCREVA "Digite o número de termos n da série: "
-LEIA n
-SE n > 0 ENTAO
-S = 0 PARA i DE 1 ATÉ n FAÇA
-numerador = (2 * i) - 1
-denominador = 2 * i
-termo = numerador / denominador
-S <- S + termo
-FIM_PARA
-ESCREVA "O valor da série S é " S
-SENAO
-ESCREVA “O número de termos deve ser maior que zero!”
-FIM_SE
+
+    // Insira seu comentário
+    ESCREVA "Digite o número de termos da série S:"
+
+    // Insira seu comentário
+    LEIA n
+
+    // Insira seu comentário
+    S <- 0
+
+    // Insira seu comentário
+    PARA i de 0 ATÉ n-1 PASSO 1 FAÇA
+
+        // Insira seu comentário
+        numerador = 2 * i + 1
+
+        // Insira seu comentário
+        denominador <- 2 * i + 2
+
+        // Insira seu comentário
+        termo = numerador / denominador
+
+        // Insira seu comentário
+        S += termo
+
+    FIM_PARA
+
+    // Insira seu comentário
+    ESCREVA "Soma da série S é ", S
+
 FIM
 ```
 
@@ -351,20 +437,39 @@ H --> I
 #### Pseudocódigo (2 pontos)
 
 ```
-Algoritmo CalcFatorial
+ALGORITMO CalcFatorial
+DECLARE n: INTEIRO
+
 INICIO
-DECLARE n, i, fatorial INTEIRO
-ESCREVA "Digite um número inteiro e não negativo n: "
-LEIA n
-SE n >= 0 ENTAO
-fatorial = 1
-PARA i DE 1 ATÉ n FAÇA
-fatorial = fatorial * i
-FIM_PARA
-ESCREVA “O fatorial de” n “é” fatorial
-SENAO
-ESCREVA “O número deve ser não negativo!”
-FIM_SE
+
+    // Insira seu comentário
+    ESCREVA "Digite um numero inteiro nao-negativo:"
+
+    // Insira seu comentário
+    LEIA n
+
+    // Insira seu comentário
+    SE n >= 0 ENTAO
+
+        // Insira seu comentário
+        fator <- 1
+
+        // Insira seu comentário
+        PARA i DE 1 ATÉ n PASSO 1 FAÇA
+
+            // Insira seu comentário
+            fator <- fator * i        // fator *= i
+
+        FIM_PARA
+
+        // Insira seu comentário
+        ESCREVA "O fatorial de, n, é:", fator
+
+    // Insira seu comentário
+    SENAO
+        ESCREVA "O valor deve ser maior ou igual a zero!"
+    FIM_SE
+
 FIM
 ```
 
@@ -410,22 +515,39 @@ I --LOOP--> E
 #### Pseudocódigo (2 pontos)
 
 ```
-Algoritmo GeraFibonacci
+ALGORITMO GeraFibonacci
+DECLARE n, a, b, termo_atual: INTEIRO
+
 INICIO
-DECLARE n, a, b, termo atual INTEIRO
-ESCREVA "Digite o número de termos n: "
-LEIA n
-SE n >= 1 ENTAO a = 0
-b = 1
-ESCREVA “Os” n “primeiros termos da sequência de Fibonacci são:”
-ESCREVA a
-ESCREVA b
-PARA i DE 3 ATÉ n FAÇA termo = a + b
-ESCREVA termo a = b b = termo
-FIM_PARA
-SENAO
-ESCREVA “O número de termos deve ser maior ou igual a 1!”
-FIM_SE
+
+    // Insira seu comentário
+    ESCREVA "Número de termos da série Fibonacci:"
+
+    // Insira seu comentário
+    LEIA n
+
+    // Insira seu comentário
+    a <- 0
+
+    // Insira seu comentário
+    b <- 1
+
+    // Insira seu comentário
+    PARA i DE 1 ATE n FAÇA
+
+        // Insira seu comentário
+        ESCREVA a
+
+        // Insira seu comentário
+        termo_atual <- a + b
+
+        // Insira seu comentário
+        a <- b
+
+        // Insira seu comentário
+        b <- termo_atual
+
+    FIM_PARA
 FIM
 ```
 #### Teste de mesa
@@ -475,19 +597,43 @@ E --> W
 
 ```
 Algoritmo InverteInteiro
+DECLARE num, num_inv, digito: INTEIRO
+
 INICIO
-DECLARE num, digito, num_invertido INTEIRO
-ESCREVA "Digite um número inteiro positivo "
-LEIA num
-SE num > 0 ENTAO num_invertido = 0
-ENQUANTO num > 0 FAÇA
-digito = num % 10
-num_invertido = (num_invertido * 10) + digito
-num = num / 10
-FIM_ENQUANTO ESCREVA "O número invertido é: " num_invertido
-SENAO
-ESCREVA “O número deve ser inteiro e positivo!”
-FIM_SE
+
+    // Insira seu comentário
+    ESCREVA "Digite o número a ser invertido:"
+    LEIA num
+
+    // Insira seu comentário
+    SE num < 0 ENTAO
+
+        // Insira seu comentário
+        ESCREVA "O número deve ser positivo!"
+
+    // Insira seu comentário
+    SENAO
+
+        // Insira seu comentário
+        num_inv <- 0
+
+        // Insira seu comentário
+        ENQUANTO num > 0 FAÇA
+
+            // Insira seu comentário
+            digito <- num % 10
+
+            // Insira seu comentário
+            num_inv <- (num_inv * 10) + digito
+
+            // Insira seu comentário
+            num <- num // 10
+
+        // Insira seu comentário
+        ESCREVA "Número invertido:", num_inv
+
+    FIM_SE
+
 FIM
 ```
 
