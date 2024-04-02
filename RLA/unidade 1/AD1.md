@@ -72,32 +72,32 @@ I --> J{{"b =", b}}
 
 ```
 ALGORTIMO TrocaValores
-DECLARE a,b,axu: REAL
+DECLARE a, b, aux: REAL
 
 INICIO
 
-    // Insira seu comentário
+    // Variável "a" como dado de entrada
     ESCREVA "Digite o valor da a:"
 
-    // Insira seu comentário
+    // Armazena a entrada do usuário na variável "a"
     LEIA a
 
-    // Insira seu comentário
+    // Variável "b" como dado de entrada
     ESCREVA "Digite o valor da b:"
 
-    // Insira seu comentário
+    // Armazena a entrada do usuário na variável "b"
     LEIA b
 
-    // Insira seu comentário
+    // Variável "a" atribuída a "aux"
     aux <- a 
 
-    // Insira seu comentário
+    // Variável "b" atribuída a "a"
     a <- b
 
-    // Insira seu comentário
+    // Variável "aux" atribuída a "b"
     b <- aux
 
-    // Insira seu comentário
+    // Exibe o dado de saída de cada variável
     ESCREVA "a=", a
     ESCREVA "b=", b
 
@@ -172,35 +172,35 @@ DECLARE n, cont, nota, i: INTEIRO
 
 INICIO
 
-    // Insira seu comentário
+    // Exibe a mensagem para entrada de dados
     ESCREVA "Digite a quantidade de notas dos alunos:"
 
-    // Insira seu comentário
+    // Armazena a entrada do usuário na variável "n"
     LEIA n
 
-    // Insira seu comentário
+    // Variável "cont" incializada com valor de 0
     cont = 0 
 
-    // Insira seu comentário
+    // Loop contado (loop for) executa as instruções a cada iteração dos valores de 'i' de 1 até n
     PARA i DE 1 ATE n FAÇA
 
-        // Insira seu comentário
+        // Exibe a mensagem para entrada de dados
         ESCREVA "Digite a nota do aluno", i, ":"
 
-        // Insira seu comentário
+        // Armazena a entrada do usuário na variável "nota"
         LEIA nota
 
-        // Insira seu comentário
+        // Executa as instruções sob a condição "nota >= 50 E nota <= 100" for verdadeira
         SE nota >= 50 E nota <= 100 ENTAO
 
-            // Insira seu comentário
+            // Adiciona uma unidade a variável "cont" 
             cont = cont + 1 
 
         FIM_SE
 
     FIM_PARA
 
-    // Insira seu comentário
+    // Exibe a mensagem para saída de dados
     ESCREVA "O numero de alunos aprovados e:", cont
 
 FIM
@@ -268,43 +268,45 @@ DECLARE n,i,soma: INTEIRO
 
 INICIO
 
-    // Insira seu comentário
+    // Exibe a mensagem para entrada de dados
     ESCREVA "Digite a quantidade de números<br> (n >= 0):"
+    
+    // Armazena a entrada do usuário na variável "n"
     LEIA n
 
-    // Insira seu comentário
+    // Executa as instruções sob a condição "n >=0" for verdadeira
     SE n >=0 ENTAO
 
-        // Insira seu comentário
+        // Variável "soma" incializada com valor de 0
         soma <- 0
 
-        // Insira seu comentário
+        // Variável "i" incializada com valor de i
         i <- i
 
-        // Insira seu comentário
+        // Loop condicional (loop while) que executa as instruções enquanto a condição "i <= n" for verdadeira
         ENQUANTO i <= n FAÇA
 
-            // Insira seu comentário
+            // Exibe a mensagem para entrada de dados
             ESCREVA "Digite um número:"
 
-            // Insira seu comentário
+            // Armazena a entrada do usuário na variável "num"
             LEIA num 
 
-            // Insira seu comentário
+            // Variável "soma" sendo atribuída a soma + num
             soma <- soma + num
 
-            // Insira seu comentário
+            // Variável "i" sendo atribuída a i + 1
             i <- i + 1
 
         FIM_ENQUANTO
 
-    // Insira seu comentário
+    // Executa as instruções sob a condição "n >=0" for falsa
     SENAO
         "O valor deve ser maior ou igual a zero!"
 
     FIM_SE
 
-    // Insira seu comentário
+    // Exibe a mensagem para saída de dados
     ESCREVA "A soma dos numeros é , soma"
 
 FIM
@@ -363,33 +365,33 @@ DECLARE n,numerador,denominador: INTEIRO; termo, S: REAL
 
 INICIO
 
-    // Insira seu comentário
+    // Exibe a mensagem para entrada de dados
     ESCREVA "Digite o número de termos da série S:"
 
-    // Insira seu comentário
+    // Armazena a entrada do usuário na variável "n"
     LEIA n
 
-    // Insira seu comentário
+    // Variável "S" incializada com valor de 0
     S <- 0
 
-    // Insira seu comentário
+    // Loop contado (loop for) executa as instruções a cada iteração dos valores de 'i' de 0 até n-1
     PARA i de 0 ATÉ n-1 PASSO 1 FAÇA
 
-        // Insira seu comentário
+        // Variável "numerador" atribuída a 2 * i + 1
         numerador = 2 * i + 1
 
-        // Insira seu comentário
+        // Variável "denominador" atribuída a  2 * i + 2
         denominador <- 2 * i + 2
 
-        // Insira seu comentário
+        // Variável "termo" atribuída a numerador / denominador
         termo = numerador / denominador
 
-        // Insira seu comentário
+        // Variável "S" atribuída a termo
         S += termo
 
     FIM_PARA
 
-    // Insira seu comentário
+    // Exibe a mensagem para saída de dados
     ESCREVA "Soma da série S é ", S
 
 FIM
@@ -442,30 +444,30 @@ DECLARE n: INTEIRO
 
 INICIO
 
-    // Insira seu comentário
+    // Exibe a mensagem para entrada de dados
     ESCREVA "Digite um numero inteiro nao-negativo:"
 
-    // Insira seu comentário
+    // Armazena a entrada do usuário na variável "n"
     LEIA n
 
-    // Insira seu comentário
+    // Executa as instruções sob a condição "n >=0" for verdadeira
     SE n >= 0 ENTAO
 
-        // Insira seu comentário
+        // Variável "fator" incializada com valor de 1
         fator <- 1
 
-        // Insira seu comentário
+        // Loop contado (loop for) executa as instruções a cada iteração dos valores de 'i' de 1 até n
         PARA i DE 1 ATÉ n PASSO 1 FAÇA
 
-            // Insira seu comentário
+            // Variável "fator" atribuída a fator * i
             fator <- fator * i        // fator *= i
 
         FIM_PARA
 
-        // Insira seu comentário
+        // Exibe a mensagem para saída de dados
         ESCREVA "O fatorial de, n, é:", fator
 
-    // Insira seu comentário
+    // Executa as instruções sob a condição "n >=0" for falsa
     SENAO
         ESCREVA "O valor deve ser maior ou igual a zero!"
     FIM_SE
@@ -520,31 +522,31 @@ DECLARE n, a, b, termo_atual: INTEIRO
 
 INICIO
 
-    // Insira seu comentário
+    // Exibe a mensagem para entrada de dados
     ESCREVA "Número de termos da série Fibonacci:"
 
-    // Insira seu comentário
+    // Armazena a entrada do usuário na variável "n"
     LEIA n
 
-    // Insira seu comentário
+    // Variável "a" incializada com valor de 0
     a <- 0
 
-    // Insira seu comentário
+    // Variável "b" incializada com valor de 1
     b <- 1
 
-    // Insira seu comentário
+    // Loop contado (loop for) executa as instruções a cada iteração dos valores de 'i' de 1 até n
     PARA i DE 1 ATE n FAÇA
 
-        // Insira seu comentário
+        // Exibe a mensagem para saída de dados
         ESCREVA a
 
-        // Insira seu comentário
+        // Variável "termo_atual" atrelada a a + b
         termo_atual <- a + b
 
-        // Insira seu comentário
+        // Variável "a" atribuída a b
         a <- b
 
-        // Insira seu comentário
+        // Variável "b" atribuída a termo_atual
         b <- termo_atual
 
     FIM_PARA
@@ -601,35 +603,37 @@ DECLARE num, num_inv, digito: INTEIRO
 
 INICIO
 
-    // Insira seu comentário
+    // Exibe a mensagem para entrada de dados
     ESCREVA "Digite o número a ser invertido:"
+   
+	// Armazena a entrada do usuário na variável "num"
     LEIA num
 
-    // Insira seu comentário
+    // Executa as instruções sob a condição "num < 0" for verdadeira
     SE num < 0 ENTAO
 
-        // Insira seu comentário
+        // Exibe a mensagem para saída de dados
         ESCREVA "O número deve ser positivo!"
 
-    // Insira seu comentário
+    // Executa as instruções sob a condição "num < 0" for falsa
     SENAO
 
-        // Insira seu comentário
+        // Variável "num_inv" incializada com valor de 0
         num_inv <- 0
 
-        // Insira seu comentário
+        // Loop condicional (loop while) que executa as instruções enquanto a condição "num > 0" for verdadeira
         ENQUANTO num > 0 FAÇA
 
-            // Insira seu comentário
+            // Variável "digito" atribuída a num % 10
             digito <- num % 10
 
-            // Insira seu comentário
+            // Variável "num_inv" atribuída a (num_inv * 10) + digito
             num_inv <- (num_inv * 10) + digito
 
-            // Insira seu comentário
+            // Variável "num" atribuída a num // 10
             num <- num // 10
 
-        // Insira seu comentário
+        // Exibe a mensagem para saída de dados
         ESCREVA "Número invertido:", num_inv
 
     FIM_SE
