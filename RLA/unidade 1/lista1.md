@@ -40,7 +40,7 @@ INICIO
     // Executa as instruções sob a condição "numero >= 0" for verdadeira
     SE numero >= 0 ENTAO
 
-        // Insira seu comentário
+        // Variável "resto" atribuída a numero % 2
         resto <- numero % 2
 
         // Executa as instruções sob a condição "resto == 0" for verdadeira
