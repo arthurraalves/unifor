@@ -31,29 +31,29 @@ DECLARE numero, resto: INTEIRO
 
 INICIO
 
-    // Insira seu comentário
+    // Exibe a mensagem para entrada de dados
     ESCREVA "Digite um número: "
     
-    // Insira seu comentário
+    // Armazena a entrada do usuário na variável "numero"
     LEIA numero
     
-    // Insira seu comentário
+    // Executa as instruções sob a condição "numero >= 0" for verdadeira
     SE numero >= 0 ENTAO
 
         // Insira seu comentário
         resto <- numero % 2
 
-        // Insira seu comentário
+        // Executa as instruções sob a condição "resto == 0" for verdadeira
         SE resto == 0 ENTAO
             ESCREVA "O número é par!"
 
-        // Insira seu comentário
+        // Executa as instruções sob a condição "resto == 0" for falsa
         SENAO
           ESCREVA "O número é impar!"
 
         FIM_SE
 
-    // Insira seu comentário
+    // Executa as instruções sob a condição "numero >= 0" for falsa
     SENAO             
         ESCREVA "O número deve ser postivo!"
 
@@ -96,23 +96,23 @@ DECLARE sal_atual, sal_reaj: REAL
 
 INICIO
 
-    // Insira seu comentário
+    // Exibe a mensagem para entrada de dados
     ESCREVA "Digite seu salário atual:"
 
-    // Insira seu comentário
+    // Armazena a entrada do usuário na variável "sal_atual"
     LEIA sal_atual
 
-    // Insira seu comentário
+    // Executa as instruções sob a condição "sal_atual <= 500" for verdadeira
     SE sal_atual <= 500 ENTAO
         sal_reaj = sal_atual * 1.2
 
-    // Insira seu comentário
+    // Executa as instruções sob a condição "sal_atual <= 500" for falsa
     SENAO
         sal_reaj = sal_atual * 1.1
 
     FIM_SE
 
-    // Insira seu comentário
+    // Exibe a mensagem para saída de dados
     ESCREVA "O novo salário é R$", sal_reaj
 
 FIM
@@ -156,35 +156,35 @@ DECLARE nota1, nota2, media: REAL
 
 INICIO
 
-    // Insira seu comentário
+    // Exibe a mensagem para entrada de dados
     ESCREVA "Digite a nota 1:"
 
-    // Insira seu comentário
+    // Armazena a entrada do usuário na variável "nota1"
     LEIA nota1
 
-    // Insira seu comentário
+    // Exibe a mensagem para entrada de dados
     ESCREVA "Digite a nota 2:"
 
-    // Insira seu comentário
+    // Armazena a entrada do usuário na variável "nota2"
     LEIA nota2
 
-    // Insira seu comentário
+    // Executa as instruções sob a condição "nota1 >= 0 E nota2 >= 0" for verdadeira
     SE nota1 >= 0 E nota2 >= 0 ENTAO
 
-        // Insira seu comentário
+        // Variável "media" atribuída a (nota1 + nota2)/2
         media =  (nota1 + nota2)/2
 
-        // Insira seu comentário
+        // Executa as instruções sob a condição "media >= 7" for verdadeira
         SE media >= 7 ENTAO
             ESCREVA "O aluno está aprovado!"
 
-        // Insira seu comentário
+        // Executa as instruções sob a condição "media >= 7" for falsa
         SENAO
             "O aluno está reprovado!"
 
         FIM_SE
 
-    // Insira seu comentário
+    //  Executa as instruções sob a condição "nota1 >= 0 E nota2 >= 0" for falsa
     SENAO
         ESCREVA "A nota deve ser maior que zero!"
 
@@ -231,30 +231,30 @@ DECLARE idade, anos_apto: INTEIRO
 
 INICIO
 
-    // Insira seu comentário
+    // Exibe a mensagem para entrada de dados
     ESCREVA ""Digite a sua idade:"
 
-    // Insira seu comentário
+    // Armazena a entrada do usuário na variável "idade"
     LEIA idade
 
-    // Insira seu comentário
+    // Executa as instruções sob a condição "idade < 0" for verdadeira
     SE idade < 0 ENTAO
         ESCREVA "A idade deve ser maior que zero!"
 
-    // Insira seu comentário
+    // Executa as instruções sob a condição "idade < 0" for falsa
     SENAO
 
-        // Insira seu comentário
+        // Executa as instruções sob a condição "idade >= 18" for verdadeira
         SE idade >= 18 ENTAO
             ESCREVA "O candidato está apto a tirar a CNH!"
 
-        // Insira seu comentário
+        // Executa as instruções sob a condição "idade >= 18" for falsa
         SENAO
 
-            // Insira seu comentário
+            // Variável "anos_apto" atribuída a 18 - idade
             anos_apto <- 18 - idade
 
-            // Insira seu comentário
+            // Exibe a mensagem para saída de dados
             ESCREVA "Faltam", anos_apto, "ano(s) para o candidato estar apto!"
 
         FIM_SE
